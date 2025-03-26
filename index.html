@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sejarah Indonesia</title>
+  </head>
+  <nav class="bg-[#9fafab] shadow-md">
+    <div class="container max-w-6xl px-4 mx-auto">
+      <div class="flex flex-col items-center justify-between py-4 md:flex-row">
+        <h1 class="text-2xl font-semibold text-black md:text-3xl">Sejarah Indonesia</h1>
+        
+        <div class="flex flex-wrap justify-center gap-2 mt-4 md:mt-0">
+          <button onclick="handleMenu('materi')" class="px-4 py-2 text-black transition border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white">Materi</button>
+          <button onclick="handleMenu('materiVideo')" class="px-4 py-2 text-black transition border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white">Materi Video</button>
+          <button onclick="handleMenu('quiz')" class="px-4 py-2 text-black transition border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white">Quiz</button>
+          <button onclick="handleMenu('timeline')" class="px-4 py-2 text-black transition border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white">Timeline</button>
+          <button onclick="handleMenu('developer')" class="px-4 py-2 text-black transition border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white">Developer</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="bg" class="flex flex-col items-center justify-center w-screen min-h-screen px-4 bg-center bg-cover sm:px-6 lg:px-10" style="background-image: url('img/Perdagangan dan Jalur Rempah 2.jpg')">
+    <div id="output" class="w-full p-4 bg-white rounded-lg shadow-md min-h-[100px] relative overflow-hidden mb-20 mt-8">
+      <div id="materiContent" class="content">
+        <div class="flex flex-col md:flex-row">
+          <div class="w-full md:w-1/3 lg:w-1/4">
+            <h2 class="mb-4 text-xl font-bold">Daftar Materi</h2>
+            <div class="space-y-2">
+              <div onclick="showMateri(1)" class="p-2 rounded materi-nav active" id="nav1">1. Masa Pra Aksara</div>
+              <div onclick="showMateri(2)" class="p-2 rounded materi-nav" id="nav2">2. Masa Hindu-Buddha</div>
+              <div onclick="showMateri(3)" class="p-2 rounded materi-nav" id="nav3">3. Masa Islam</div>
+              <div onclick="showMateri(4)" class="p-2 rounded materi-nav" id="nav4">4. Kesultanan di Nusantara</div>
+              <div onclick="showMateri(5)" class="p-2 rounded materi-nav" id="nav5">5. Perdagangan dan Jalur Rempah</div>
+              <div onclick="showMateri(6)" class="p-2 rounded materi-nav" id="nav6">6. Penjajahan Bangsa Barat</div>
+              <div onclick="showMateri(7)" class="p-2 rounded materi-nav" id="nav7">7. Organisasi Pergerakan Nasional</div>
+              <div onclick="showMateri(8)" class="p-2 rounded materi-nav" id="nav8">8. Penjajahan Jepang</div>
+              <div onclick="showMateri(9)" class="p-2 rounded materi-nav" id="nav9">9. Proklamasi Kemerdekaan dan Perjuangan Mempertahankan Kemerdekaan</div>
+              <div onclick="showMateri(10)" class="p-2 rounded materi-nav" id="nav10">10. Gerakan 30 September 1965 (G30S/PKI)</div>
+              <div onclick="showMateri(11)" class="p-2 rounded materi-nav" id="nav11">11. Demokrasi di Indonesia</div>
+            </div>
+          </div>
+
+              <div class="w-full md:w-2/3">
+                <div class="slide-presentation">
+                  <div class="slide" id="materi1">
+                    <h2 class="mb-4 text-xl font-bold">1. Masa Pra Aksara</h2>
+                    <div class="flex mb-4 border-b">
+                      <button
+                        class="px-4 py-2 font-medium border-b-2 border-blue-500 tab-btn"
+                        onclick="openTab('tab1', this)"
+                      >
+                        Pengertian Masa Pra-Aksara
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab2', this)"
+                      >
+                        Periodisasi Zaman Batu
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab3', this)"
+                      >
+                        Kehidupan Manusia Purba
+                      </button>
+                    </div>
+
+                    <div id="tab1" class="tab-content">
+                        <img
+                        src="img/Zaman Prasejarah 2.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Masa pra aksara adalah periode sebelum manusia mengenal tulisan. Pada masa ini, kehidupan manusia bergantung pada alam dengan berburu dan meramu. Seiring waktu, m bertani dan beternak.</p>
+                    </div>
+
+                    <div id="tab2" class="hidden tab-content">
+                                              <img
+                        src="img/Zaman Prasejarah.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Periodisasi zaman batu dibagi menjadi Paleolitikum (zaman batu tua), Mesolitikum (zaman batu tengah), Neolitikum (zaman batu baru), dan Megalitikum (zaman batu besar) yang ditandai dengan munculnya budaya megalitik seperti menhir dan dolmen.
+
+                      </p>
+                    </div>
+
+                    <div id="tab3" class="hidden tab-content">
+                      <img
+                        src="img/Zaman Prasejarah 3.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Manusia purba di Indonesia terdiri dari beberapa jenis, seperti Meganthropus Paleojavanicus, Pithecanthropus Erectus, dan Homo Wajakensis. Perkembangan selanjutnya ditandai dengan zaman perundagian, ketika ma mengenal logam dan teknik peleburan untuk membuat alat dan senjata.
+
+                      </p>
+                    </div>
+
+                    <div class="slide-navigation">
+                      <button
+                        onclick="prevSlide()"
+                        class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                      >
+                        Sebelumnya
+                      </button>
+                      <button
+                        onclick="nextSlide()"
+                        class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+                      >
+                        Selanjutnya
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="slide" id="materi2">
+                    <h2 class="mb-4 text-xl font-bold">2. Masa Hindu-Buddha</h2>
+                    <div class="flex mb-4 border-b">
+                      <button
+                        class="px-4 py-2 font-medium border-b-2 border-blue-500 tab-btn"
+                        onclick="openTab('tab4', this)"
+                      >
+                        Masuknya Hindu-Buddha ke Indonesia
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab5', this)"
+                      >
+                        Kerajaan Hindu-Buddha
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab6', this)"
+                      >
+                        Peninggalan Sejarah
+                      </button>
+                    </div>
+
+                    <div id="tab4" class="tab-content">
+                      <img
+                        src="img/Kerajaan Hindu - Buddha.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        Penyebaran Hindu-Buddha di Indonesia membawa perubahan besar dalam sistem pemerintahan, budaya, dan kepercayaan.
+                      </p>
+                    </div>
+
+                    <div id="tab5" class="hidden tab-content">
+                                            <img
+                        src="img/Kerajaan Hindu - Buddha 2.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        Kerajaan-kerajaan seperti Kutai, Tarumanegara, Sriwijaya, dan Majapahit berkembang dengan pengaruh kuat dari India.
+                      </p>
+                    </div>
+
+                    <div id="tab6" class="hidden tab-content">
+                                            <img
+                        src="img/Kerajaan Hindu - Buddha.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Bukti peninggalannya berupa prasasti, candi, dan kitab-kitab yang mencerminkan kemajuan ilmu pengetahuan dan sastra pada masa itu.</p>
+                    </div>
+
+                    <div class="slide-navigation">
+                      <button
+                        onclick="prevSlide()"
+                        class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                      >
+                        Sebelumnya
+                      </button>
+                      <button
+                        onclick="nextSlide()"
+                        class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+                      >
+                        Selanjutnya
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="slide" id="materi3">
+                    <h2 class="mb-4 text-xl font-bold">3. Masa Islam</h2>
+                    <div class="flex mb-4 border-b">
+                      <button
+                        class="px-4 py-2 font-medium border-b-2 border-blue-500 tab-btn"
+                        onclick="openTab('tab7', this)"
+                      >
+                        Teori Masuknya Islam
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab8', this)"
+                      >
+                        Peran Wali Songo
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab9', this)"
+                      >
+                        Perubahan Sosial Budaya
+                      </button>
+                    </div>
+
+                    <div id="tab7" class="tab-content">
+                      <img
+                        src="img/Kerajaan Islam.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        Islam masuk ke Indonesia melalui jalur perdagangan yang dibawa oleh pedagang Arab, Persia, dan Gujarat. Teori penyebaran Islam meliputi teori Gujarat, teori Mekah, dan teori Persia.
+                      </p>
+                    </div>
+
+                    <div id="tab8" class="hidden tab-content">
+                      <img
+                        src="img/Kerajaan Islam 2.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        Kerajaan-kerajaan Islam memainkan peran penting dalam perlawanan terhadap penjajah. Wali Songo berperan dalam menyebarkan Islam melalui pendekatan budaya, seperti seni dan wayang.
+                      </p>
+                    </div>
+
+                    <div id="tab9" class="hidden tab-content">
+                      <img
+                        src="img/Kerajaan Islam 3.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Tradisi keislaman di Indonesia berkembang dengan adanya pesantren dan perayaan hari-hari besar Islam yang masih bertahan hingga sekarang.</p>
+                    </div>
+
+                    <div class="slide-navigation">
+                      <button
+                        onclick="prevSlide()"
+                        class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                      >
+                        Sebelumnya
+                      </button>
+                      <button
+                        onclick="nextSlide()"
+                        class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+                      >
+                        Selanjutnya
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="slide" id="materi4">
+                    <h2 class="mb-4 text-xl font-bold">4. Kesultanan di Nusantara</h2>
+                    <div class="flex mb-4 border-b">
+                      <button
+                        class="px-4 py-2 font-medium border-b-2 border-blue-500 tab-btn"
+                        onclick="openTab('tab10', this)"
+                      >
+                        Kerajaan Islam Terbesar
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab11', this)"
+                      >
+                        Sistem Pemerintahan Islam
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab12', this)"
+                      >
+                        Budaya Islam di Nusantara
+                      </button>
+                    </div>
+
+                    <div id="tab10" class="tab-content">
+                      <img
+                        src="img/Kerajaan Kesultanan.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        Berkembang pesat setelah masuknya Islam ke Indonesia sekitar abad ke-13. Kesultanan seperti Samudera Pasai, Demak, Aceh, Banten, Mataram Islam, serta Ternate dan Tidore memainkan peran penting dalam politik dan ekonomi wilayahnya.
+                      </p>
+                    </div>
+
+                    <div id="tab11" class="hidden tab-content">
+                      <img
+                        src="img/Kerajaan Kesultanan 2.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        Kesultanan-kesultanan ini mengadopsi sistem pemerintahan Islam dan menjalin hubungan dengan dunia Islam, termasuk Kesultanan Utsmaniyah.
+                      </p>
+                    </div>
+
+                    <div id="tab12" class="hidden tab-content">
+                      <img
+                        src="img/Kerajaan Kesultanan 3.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Selain sebagai pusat pemerintahan, kesultanan juga menjadi pusat penyebaran agama Islam dan pengembangan budaya, seperti dalam seni kaligrafi, arsitektur masjid, dan sastra Islam.</p>
+                    </div>
+
+                    <div class="slide-navigation">
+                      <button
+                        onclick="prevSlide()"
+                        class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                      >
+                        Sebelumnya
+                      </button>
+                      <button
+                        onclick="nextSlide()"
+                        class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+                      >
+                        Selanjutnya
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="slide" id="materi5">
+                    <h2 class="mb-4 text-xl font-bold">Perdagangan dan Jalur Rempah</h2>
+                    <div class="flex mb-4 border-b">
+                      <button
+                        class="px-4 py-2 font-medium border-b-2 border-blue-500 tab-btn"
+                        onclick="openTab('tab13', this)"
+                      >
+                        Indonesia sebagai Jalur Perdagangan
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab14', this)"
+                      >
+                        Rempah-rempah sebagai Daya Tarik
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab15', this)"
+                      >
+                        Kedatangan Bangsa Asing
+                      </button>
+                    </div>
+
+                    <div id="tab13" class="tab-content">
+                      <img
+                        src="img/Perdagangan dan Jalur Rempah.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Menjadi faktor utama yang menarik perhatian bangsa asing ke Nusantara. Indonesia, khususnya Maluku, dikenal sebagai "Kepulauan Rempah" karena hasil bumi seperti cengkeh, pala, dan lada yang sangat berharga di pasar dunia.
+                      </p>
+                    </div>
+
+                    <div id="tab14" class="hidden tab-content">
+                      <img
+                        src="img/Perdagangan dan Jalur Rempah 2.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        Sejak zaman Sriwijaya dan Majapahit, Nusantara telah menjadi pusat perdagangan maritim yang menghubungkan Asia, Timur Tengah, dan Eropa.
+                      </p>
+                    </div>
+
+                    <div id="tab15" class="hidden tab-content">
+                      <img
+                        src="img/Perdagangan dan Jalur Rempah 3.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Kedatangan bangsa Portugis, Spanyol, Belanda, dan Inggris ke Indonesia pada abad ke-16 hingga ke-19 bertujuan menguasai perdagangan rempah. Penguasaan jalur perdagangan ini menyebabkan eksploitasi dan kolonialisme.</p>
+                    </div>
+
+                    <div class="slide-navigation">
+                      <button
+                        onclick="prevSlide()"
+                        class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                      >
+                        Sebelumnya
+                      </button>
+                      <button
+                        onclick="nextSlide()"
+                        class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+                      >
+                        Selanjutnya
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="slide" id="materi6">
+                    <h2 class="mb-4 text-xl font-bold"></h2>
+                    <div class="flex mb-4 border-b">
+                      <button
+                        class="px-4 py-2 font-medium border-b-2 border-blue-500 tab-btn"
+                        onclick="openTab('tab16', this)"
+                      >
+                        Motivasi Penjajahan
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab17', this)"
+                      >
+                        VOC dan Kolonialisme Belanda
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab18', this)"
+                      >
+                        Perlawanan Rakyat Nusantara
+                      </button>
+                    </div>
+
+                    <div id="tab16" class="tab-content">
+                      <img
+                        src="img/Kolonialisme Eropa.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Kedatangan bangsa Eropa ke Nusantara dipicu oleh pencarian rempah-rempah dan motivasi ekonomi serta agama (gold, glory, gospel). Portugis, Spanyol, Belanda, dan Inggris datang silih berganti untuk menguasai perdagangan.
+                      </p>
+                    </div>
+
+                    <div id="tab17" class="hidden tab-content">
+                      <img
+                        src="img/Kolonialisme Eropa 2.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        VOC didirikan oleh Belanda untuk memonopoli perdagangan, tetapi akhirnya dibubarkan karena korupsi dan utang yang menumpuk. Penjajahan Belanda berlanjut dengan sistem tanam paksa yang menyengsarakan rakyat.
+                      </p>
+                    </div>
+
+                    <div id="tab18" class="hidden tab-content">
+                                            <img
+                        src="img/Kolonialisme Eropa 3.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Seiring waktu, perlawanan rakyat seperti Perang Diponegoro dan Perang Aceh semakin menguat.</p>
+                    </div>
+
+                    <div class="slide-navigation">
+                      <button
+                        onclick="prevSlide()"
+                        class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                      >
+                        Sebelumnya
+                      </button>
+                      <button
+                        onclick="nextSlide()"
+                        class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+                      >
+                        Selanjutnya
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="slide" id="materi7">
+                    <h2 class="mb-4 text-xl font-bold">Organisasi Pergerakan Nasional</h2>
+                    <div class="flex mb-4 border-b">
+                      <button
+                        class="px-4 py-2 font-medium border-b-2 border-blue-500 tab-btn"
+                        onclick="openTab('tab19', this)"
+                      >
+                        Munculnya Kesadaran Nasional
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab20', this)"
+                      >
+                        Peristiwa Penting
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab21', this)"
+                      >
+                        Perjuangan melalui Pers dan Pendidikan
+                      </button>
+                    </div>
+
+                    <div id="tab19" class="tab-content">
+                      <img
+                        src="img/Pergerakan Nasional.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Perlawanan terhadap penjajahan semakin terorganisir dengan munculnya organisasi seperti Budi Utomo (1908), Sarekat Islam, dan Indische Partij.
+                      </p>
+                    </div>
+
+                    <div id="tab20" class="hidden tab-content">
+                      <img
+                        src="img/Pergerakan Nasional 2.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                         Peristiwa penting lainnya adalah berdirinya PNI oleh Soekarno dan Sumpah Pemuda tahun 1928 yang menegaskan semangat persatuan bangsa.
+                      </p>
+                    </div>
+
+                    <div id="tab21" class="hidden tab-content">
+                      <img
+                        src="img/Pergerakan Nasional 3.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Pergerakan nasional merupakan perlawanan bersenjata ke perjuangan diplomasi dan pendidikan untuk meningkatkan kesadaran nasional.</p>
+                    </div>
+
+                    <div class="slide-navigation">
+                      <button
+                        onclick="prevSlide()"
+                        class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                      >
+                        Sebelumnya
+                      </button>
+                      <button
+                        onclick="nextSlide()"
+                        class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+                      >
+                        Selanjutnya
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="slide" id="materi8">
+                    <h2 class="mb-4 text-xl font-bold">Penjajahan Jepang</h2>
+                    <div class="flex mb-4 border-b">
+                      <button
+                        class="px-4 py-2 font-medium border-b-2 border-blue-500 tab-btn"
+                        onclick="openTab('tab22', this)"
+                      >
+                        Awal Kedatangan Jepang
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab23', this)"
+                      >
+                        Kerja Paksa (Romusha)
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab24', this)"
+                      >
+                        Organisasi Militer dan Politik
+                      </button>
+                    </div>
+
+                    <div id="tab22" class="tab-content ">
+                      <img
+                        src="img/Pendudukan Jepang.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Jepang menduduki Indonesia pada tahun 1942 dan memperkenalkan kebijakan yang awalnya menarik simpati rakyat, seperti menghapus diskriminasi rasial dan mendukung pendidikan pribumi.</p>
+                    </div>
+
+                    <div id="tab23" class="hidden tab-content">
+                      <img
+                        src="img/Pendudukan Jepang 2.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        Namun, Jepang juga menerapkan kerja paksa (romusha) yang menyebabkan penderitaan besar.
+                      </p>
+                    </div>
+
+                    <div id="tab24" class="hidden tab-content">
+                      <img
+                        src="img/Pendudukan Jepang 3.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p> Jepang mendirikan berbagai organisasi seperti PETA dan Jawa Hokokai yang bertujuan untuk mendukung kepentingan perang Jepang.</p>
+                    </div>
+
+                    <div class="slide-navigation">
+                      <button
+                        onclick="prevSlide()"
+                        class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                      >
+                        Sebelumnya
+                      </button>
+                      <button
+                        onclick="nextSlide()"
+                        class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+                      >
+                        Selanjutnya
+                      </button>
+                    </div>
+                  </div>
+                  <div class="slide" id="materi9">
+                    <h2 class="mb-4 text-xl font-bold">Proklamasi Kemerdekaan dan Perjuangan Mempertahankan Kemerdekaan</h2>
+                    <div class="flex mb-4 border-b">
+                      <button
+                        class="px-4 py-2 font-medium border-b-2 border-blue-500 tab-btn"
+                        onclick="openTab('tab25', this)"
+                      >
+                        Proklamasi 17 Agustus 1945
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab26', this)"
+                      >
+                        Agresi Militer Belanda
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab27', this)"
+                      >
+                        Perjuangan Diplomasi
+                      </button>
+                    </div>
+
+                    <div id="tab25" class="tab-content ">
+                      <img
+                        src="img/Revolusi Kemerdekaan.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        Setelah Jepang menyerah kepada Sekutu pada Agustus 1945, Indonesia segera memproklamasikan kemerdekaan pada 17 Agustus 1945. Peristiwa penting meliputi peristiwa Rengasdengklok dan sidang PPKI yang menetapkan dasar negara Pancasila. 
+                      </p>
+                    </div>
+
+                    <div id="tab26" class="hidden tab-content">
+                      <img
+                        src="img/Revolusi Kemerdekaan 2.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        Setelah merdeka, Belanda berusaha kembali menjajah Indonesia dengan agresi militer. Perlawanan rakyat dalam pertempuran seperti 10 November di Surabaya membuktikan semangat nasionalisme yang tinggi.
+                      </p>
+                    </div>
+
+                    <div id="tab27" class="hidden tab-content">                      
+                      <img
+                        src="img/Revolusi Kemerdekaan 3.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Diplomasi juga dilakukan melalui perundingan seperti Linggajati, Renville, dan Roem-Roijen, yang akhirnya mengantarkan Indonesia menuju pengakuan kedaulatan pada 1949.</p>
+                    </div>
+
+                    <div class="slide-navigation">
+                      <button
+                        onclick="prevSlide()"
+                        class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                      >
+                        Sebelumnya
+                      </button>
+                      <button
+                        onclick="nextSlide()"
+                        class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+                      >
+                        Selanjutnya
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="slide" id="materi10">
+                    <h2 class="mb-4 text-xl font-bold">Gerakan 30 September 1965 (G30S/PKI)</h2>
+                    <div class="flex mb-4 border-b">
+                      <button
+                        class="px-4 py-2 font-medium border-b-2 border-blue-500 tab-btn"
+                        onclick="openTab('tab28', this)"
+                      >
+                        Latar Belakang G30S/PKI
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab29', this)"
+                      >
+                        Peristiwa 30 September 1965
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab30', this)"
+                      >
+                        Dampak G30S/PKI
+                      </button>
+                    </div>
+
+                    <div id="tab28" class="tab-content ">
+                      <img
+                        src="img/G 30 S PKI.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        peristiwa yang mengubah jalannya sejarah politik Indonesia. Pada malam 30 September 1965, sekelompok militer yang mengklaim sebagai bagian dari Gerakan 30 September menculik dan membunuh enam jenderal TNI serta satu perwira lainnya.
+                      </p>
+                    </div>
+
+                    <div id="tab29" class="hidden tab-content">
+                      <img
+                        src="img/G 30 S PKI (2).jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        Peristiwa ini kemudian dikaitkan dengan Partai Komunis Indonesia (PKI), meskipun hingga kini masih terdapat berbagai teori dan perdebatan mengenai dalang sebenarnya. Setelah kejadian tersebut, Soeharto mengambil alih kendali keamanan dan akhirnya menggulingkan kekuasaan Presiden Sukarno.
+                      </p>
+                    </div>
+
+                    <div id="tab30" class="hidden tab-content">
+                      <img
+                        src="img/G 30 S PKI (3).jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Peristiwa ini juga menyebabkan pembantaian besar-besaran terhadap orang-orang yang diduga sebagai anggota atau simpatisan PKI, dengan jumlah korban yang diperkirakan mencapai ratusan ribu hingga jutaan orang, serta berujung pada berakhirnya Demokrasi Terpimpin dan lahirnya Orde Baru.</p>
+                    </div>
+
+                    <div class="slide-navigation">
+                      <button
+                        onclick="prevSlide()"
+                        class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                      >
+                        Sebelumnya
+                      </button>
+                      <button
+                        onclick="nextSlide()"
+                        class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+                      >
+                        Selanjutnya
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="slide" id="materi11">
+                    <h2 class="mb-4 text-xl font-bold">Demokrasi di Indonesia</h2>
+                    <div class="flex mb-4 border-b">
+                      <button
+                        class="px-4 py-2 font-medium border-b-2 border-blue-500 tab-btn"
+                        onclick="openTab('tab31', this)"
+                      >
+                        Perubahan Sistem Pemerintahan
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab32', this)"
+                      >
+                        Orde Baru 1965-1998
+                      </button>
+                      <button
+                        class="px-4 py-2 font-medium tab-btn"
+                        onclick="openTab('tab33', this)"
+                      >
+                        Reformasi 1998 dan Demokrasi Modern
+                      </button>
+                    </div>
+
+                    <div id="tab31" class="tab-content ">   
+                      <img
+                        src="img/Parlementer.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        Sistem pemerintahan Indonesia mengalami berbagai perub dari demokrasi parlementer (1950-1959), demokrasi terpimpin (1959-1965), hingga Orde Baru (1965-1998).
+                      </p>
+                    </div>
+
+                    <div id="tab32" class="hidden tab-content">
+                      <img
+                        src="img/Orde Baru.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>
+                        Setiap periode ini memiliki tantangan dan dinamika politik yang berbeda. Pada masa Orde Baru, pembangunan ekonomi berkembang pesat, tetapi kebebasan politik sangat terbatas.
+                      </p>
+                    </div>
+
+                    <div id="tab33" class="hidden tab-content">
+                      <img
+                        src="img/Demokrasi Terpemimpin.jpg"
+                        alt=""
+                        width="280px"
+                      />
+                      <p>Gerakan reformasi 1998 menggulingkan Soeharto dan membawa Indonesia ke era demokrasi yang lebih terbuka, dengan kebebasan pers dan pemilu yang lebih transparan.</p>
+                    </div>
+
+                    <div class="slide-navigation">
+                      <button
+                        onclick="prevSlide()"
+                        class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                      >
+                        Sebelumnya
+                      </button>
+                      <button
+                        onclick="nextSlide()"
+                        class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+                      >
+                        Selanjutnya
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide Indicator -->
+                <div class="slide-indicator">
+                  <div
+                    class="indicator-dot active"
+                    onclick="goToSlide(0)"
+                  ></div>
+                  <div class="indicator-dot" onclick="goToSlide(1)"></div>
+                  <div class="indicator-dot" onclick="goToSlide(2)"></div>
+                  <div class="indicator-dot" onclick="goToSlide(3)"></div>
+                  <div class="indicator-dot" onclick="goToSlide(4)"></div>
+                  <div class="indicator-dot" onclick="goToSlide(5)"></div>
+                  <div class="indicator-dot" onclick="goToSlide(6)"></div>
+                  <div class="indicator-dot" onclick="goToSlide(7)"></div>
+                  <div class="indicator-dot" onclick="goToSlide(8)"></div>
+                  <div class="indicator-dot" onclick="goToSlide(9)"></div>
+                  <div class="indicator-dot" onclick="goToSlide(10)"></div>
+                  <div class="indicator-dot" onclick="goToSlide(11)"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Materi Video -->
+          <div id="materiVideoContent" class="hidden content">
+            <h2 class="text-xl font-bold">Materi Video Sejarah Indonesia</h2>
+            <p>Video Pembelajaran Sejarah Indonesia</p>
+            <div class="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2">
+              <div class="p-4 border rounded-lg aspect-w-16 aspect-h-9">
+                <h3 class="mb-2 font-bold">Masa Pra Aksara</h3>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/3le_74ek3J0?si=sdiurmGLWfb-WmbD"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-4 border rounded-lg">
+                <h3 class="mb-2 font-bold">Masa Hindu-Buddha</h3>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/Qg3_Ef9uI9w?si=1kZXYKE_DDSUP4On"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-4 border rounded-lg">
+                <h3 class="mb-2 font-bold">Masa Islam</h3>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/Cc11elGZGLo?si=SkkF0nokNZmztC0O"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-4 border rounded-lg">
+                <h3 class="mb-2 font-bold">Kesultanan Di Nusantara</h3>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/Twx3EMkQwyk?si=RdX_YyTTXw5CKruf"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-4 border rounded-lg">
+                <h3 class="mb-2 font-bold">Perdagangan Dan Jalur Rempah</h3>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/fj2xxbx_OHQ?si=O6pu56UcCmJLD3zT"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-4 border rounded-lg">
+                <h3 class="mb-2 font-bold">Penjajahan Bangsa Barat</h3>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/0ckDy7xpwJw?si=QnmTFUuLXujQLNcL"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+              <div class="p-4 border rounded-lg">
+                <h3 class="mb-2 font-bold">Organisasi Pergerakan Nasional</h3>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/fWCzd284OZQ?si=rVoCKZBWlcPUpM3n"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-4 border rounded-lg">
+                <h3 class="mb-2 font-bold">Penjajahan Jepang</h3>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/s7p05PWp1t0?si=dF-P9t1A34ii8DX6"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-4 border rounded-lg">
+                <h3 class="mb-2 font-bold">
+                  Proklamasi Kemerdekaan dan Perjuangan Mempertahankan
+                  Kemerdekaan
+                </h3>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/OVL5ruoBXRo?si=KRJ9zCpPPHDve7Hj"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-4 border rounded-lg">
+                <h3 class="mb-2 font-bold">
+                  Gerakan 30 September 1965 (G30S/PKI)
+                </h3>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/KulfHubqC-w?si=lpiJbXs4oHcybQYi"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-4 border rounded-lg">
+                <h3 class="mb-2 font-bold">Demokrasi di Indonesia</h3>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/h32LjRkbNCM?si=ug08hS_A-j-YM5hW"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-4 border rounded-lg">
+                <h3 class="mb-2 font-bold">Sejarah Indonesia</h3>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/LlZeVYQJYBI?si=EAC6hNaKiJNY_6c0"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <a
+              href="https://www.youtube.com/results?search_query=sejarah+indonesia"
+              target="_blank"
+              class="inline-block mt-4 text-blue-500 hover:underline"
+            >
+              Jika Ingin Mencari Tentang Video Sejarah Indonesia Lainnya Segera
+              Nonton di YouTube Klik Link Ini
+            </a>
+          </div>
+
+          <!-- Quiz -->
+          <div id="quizContent" class="hidden content">
+            <div class="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
+              <h1 class="mb-6 text-2xl font-bold text-center">
+                Kuis Sejarah Indonesia
+              </h1>
+              <div id="difficultySelection" class="text-center">
+                <h2 class="mb-4 text-xl font-semibold">
+                  Pilih Tingkat Kesulitan:
+                </h2>
+                <div class="space-y-3">
+                  <button
+                    onclick="startQuiz('easy')"
+                    class="w-full p-3 text-white bg-green-500 rounded-lg hover:bg-green-600"
+                  >
+                    Mudah
+                  </button>
+                  <button
+                    onclick="startQuiz('medium')"
+                    class="w-full p-3 text-white bg-yellow-500 rounded-lg hover:bg-yellow-600"
+                  >
+                    Menengah
+                  </button>
+                  <button
+                    onclick="startQuiz('hard')"
+                    class="w-full p-3 text-white bg-red-500 rounded-lg hover:bg-red-600"
+                  >
+                    Sulit
+                  </button>
+                </div>
+              </div>
+
+              <div id="quizContainer" class="hidden"></div>
+
+              <div id="quizResult" class="hidden text-center">
+                <h2 class="mb-4 text-xl font-bold">Hasil Kuis</h2>
+                <div id="resultText" class="mb-6"></div>
+                <button
+                  onclick="resetQuiz()"
+                  class="p-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+                >
+                  Ulangi Kuis
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="timelineContent" class="hidden content">
+            <h2 class="mb-6 text-xl font-bold">Timeline Sejarah Indonesia</h2>
+<div class="timeline-container">
+  <div class="timeline-wrapper">
+    <div class="timeline-line"></div>
+    <ul class="timeline">
+      <li data-date="1945">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Proklamasi Kemerdekaan</h3>
+          <small>17 Agustus 1945</small>
+          <p>Soekarno dan Hatta memproklamasikan kemerdekaan Indonesia, menandai lahirnya Republik Indonesia.</p>
+          <span class="close-btn"><i class="fas fa-times"></i></span>
+        </div>
+      </li>
+      <li data-date="1945-1949">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Revolusi Nasional</h3>
+          <small>1945-1949</small>
+          <p>Perjuangan bersenjata dan diplomasi melawan Belanda yang ingin kembali berkuasa, diakhiri dengan Pengakuan Kedaulatan.</p>
+          <span class="close-btn"><i class="fas fa-times"></i></span>
+        </div>
+      </li>
+      <li data-date="1950-1959">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Demokrasi Parlementer</h3>
+          <small>1950-1959</small>
+          <p>Masa pemerintahan dengan sistem multipartai dan sering berganti kabinet.</p>
+          <span class="close-btn"><i class="fas fa-times"></i></span>
+        </div>
+      </li>
+      <li data-date="1959-1966">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Demokrasi Terpimpin</h3>
+          <small>1959-1966</small>
+          <p>Soekarno memimpin dengan sistem otoriter, konfrontasi dengan Malaysia, dan krisis ekonomi.</p>
+          <span class="close-btn"><i class="fas fa-times"></i></span>
+        </div>
+      </li>
+      <li data-date="1965">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Gerakan 30 September</h3>
+          <small>1965</small>
+          <p>Peristiwa G30S yang diikuti transisi kekuasaan ke Soeharto dan awal Orde Baru.</p>
+          <span class="close-btn"><i class="fas fa-times"></i></span>
+        </div>
+      </li>
+      <li data-date="1966-1998">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Orde Baru</h3>
+          <small>1966-1998</small>
+          <p>Era Soeharto dengan pembangunan ekonomi tetapi otoriter. Berakhir dengan Reformasi 1998.</p>
+          <span class="close-btn"><i class="fas fa-times"></i></span>
+        </div>
+      </li>
+      <li data-date="1998">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Reformasi</h3>
+          <small>1998</small>
+          <p>Krisis ekonomi dan demonstrasi mahasiswa memaksa Soeharto turun, membuka era demokrasi.</p>
+          <span class="close-btn"><i class="fas fa-times"></i></span>
+        </div>
+      </li>
+      <li data-date="1999">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Pemilu Demokratis</h3>
+          <small>1999</small>
+          <p>Pemilu multipartai pertama sejak 1955, dimenangkan oleh PDIP tetapi memilih Abdurrahman Wahid sebagai presiden.</p>
+          <span class="close-btn"><i class="fas fa-times"></i></span>
+        </div>
+      </li>
+      <li data-date="2004">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Pemilu Langsung Pertama</h3>
+          <small>2004</small>
+          <p>Susilo Bambang Yudhoyono terpilih sebagai presiden pertama yang dipilih langsung oleh rakyat.</p>
+          <span class="close-btn"><i class="fas fa-times"></i></span>
+        </div>
+      </li>
+      <li data-date="2014">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Era Jokowi</h3>
+          <small>2014-sekarang</small>
+          <p>Joko Widodo terpilih sebagai presiden dari luar elite politik tradisional, fokus pada infrastruktur dan pemerataan pembangunan.</p>
+          <span class="close-btn"><i class="fas fa-times"></i></span>
+        </div>
+      </li>
+      <li data-date="2019">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Pemindahan Ibu Kota</h3>
+          <small>2019</small>
+          <p>Pengumuman rencana pemindahan ibu kota dari Jakarta ke Kalimantan Timur (Nusantara).</p>
+          <span class="close-btn"><i class="fas fa-times"></i></span>
+        </div>
+      </li>
+      <li data-date="2020">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Pandemi COVID-19</h3>
+          <small>2020-2022</small>
+          <p>Indonesia menghadapi pandemi global dengan berbagai kebijakan kesehatan dan ekonomi.</p>
+          <span class="close-btn"><i class="fas fa-times"></i></span>
+        </div>
+      </li>
+      <li data-date="2024">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Pemilu 2024</h3>
+          <small>2024</small>
+          <p>Pemilihan umum serentak dengan Prabowo Subianto terpilih sebagai presiden ketujuh Indonesia.</p>
+          <span class="close-btn"><i class="fas fa-times"></i></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<div
+  id="developerContent"
+  class="hidden content"
+  style="background-color: #4caf50; color: white"
+>
+  <div class="container max-w-5xl p-4 mx-auto my-5 md:p-8 md:my-10">
+    <div class="grid grid-cols-1 gap-4 mb-8 sm:grid-cols-2">
+      <div class="overflow-hidden rounded-lg fade-in-out">
+        <img
+          src="img/profile/Arifin.jpg"
+          alt="Arifin"
+          class="object-cover object-top w-full h-64 mb-2 rounded-full shadow-lg shadow-purple-600/45 md:h-80"
+        />
+        <div class="p-4 bg-black">
+          <p class="font-semibold">Nama: M. Arifin Bachtiar</p>
+          <p class="font-semibold">NIM: 2305176070</p>
+          <p class="font-semibold">
+            Tempat, Tanggal Lahir: Samarinda, 13 Desember 2004
+          </p>
+          <p class="font-semibold">Alamat: Jln. Gatot Subroto Gang 14</p>
+          <p class="font-semibold">Hobi: Membaca Komik</p>
+          <div class="flex mt-2 space-x-2">
+            <a href="https://api.whatsapp.com/send?phone=6283140206778/">
+              <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#128c7e]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a href="https://www.instagram.com/ashine_ri">
+              <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#c13584]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded-lg fade-in-out">
+        <img
+          src="img/profile/Wahyudi.jpg"
+          alt="Wahyudi"
+          class="object-cover object-top w-full h-64 mb-2 rounded-full shadow-lg shadow-purple-600/45 md:h-80"
+        />
+        <div class="p-4 bg-black">
+          <p class="font-semibold">Nama: Wahyudi Mas'ud</p>
+          <p class="font-semibold">NIM: 2305176046</p>
+          <p class="font-semibold">
+            Tempat, Tanggal Lahir: Samarinda, 1 Desember 2004
+          </p>
+          <p class="font-semibold">Alamat: Jln. DI Panjaitan</p>
+          <p class="font-semibold">Hobi: Renang</p>
+          <div class="flex mt-2 space-x-2">
+            <a href="https://api.whatsapp.com/send?phone=6282213746815/">
+              <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#128c7e]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a href="https://www.instagram.com/wah_yudim/">
+              <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#c13584]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded-lg fade-in-out">
+        <img
+          src="img/profile/Nita.jpg"
+          alt="Nita"
+          class="object-cover object-top w-full h-64 mb-2 rounded-full shadow-lg shadow-purple-600/45 md:h-80"
+        />
+        <div class="p-4 bg-black">
+          <p class="font-semibold">Nama: Nita Yulianti</p>
+          <p class="font-semibold">NIM: 2305176065</p>
+          <p class="font-semibold">Tempat, Tanggal Lahir: Palangka Raya, 12 Juni 2004 </p>
+          <p class="font-semibold">Alamat: Jln. Pahlawan</p>
+          <p class="font-semibold">Hobi: Olahraga</p>
+          <div class="flex mt-2 space-x-2">
+            <a href="https://api.whatsapp.com/send?phone=6283140206778/">
+              <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#128c7e]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a href="https://www.instagram.com/ashine_ri">
+              <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#c13584]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded-lg fade-in-out">
+        <img
+          src="img/profile/Mahendra.jpg"
+          alt="Mahendra"
+          class="object-cover object-top w-full h-64 mb-2 rounded-full shadow-lg shadow-purple-600/45 md:h-80"
+        />
+        <div class="p-4 bg-black">
+          <p class="font-semibold">Nama: Mahendra Herianto Tandilo Bit</p>
+          <p class="font-semibold">NIM: 2305176059</p>
+          <p class="font-semibold">
+            Tempat, Tanggal Lahir: Neheas Liah Bing, 13 April 2005
+          </p>
+          <p class="font-semibold">Alamat: Perum bumi sempaja</p>
+          <p class="font-semibold">Hobi: Futsal</p>
+          <di class="flex mt-2 space-x-2">
+            <a href="https://api.whatsapp.com/send?phone=6281253534737/">
+              <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#128c7e]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a href="https://www.instagram.com/mahendrabit13/">
+              <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#c13584]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  />
+                </svg>
+              </span> 
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-[#9fafab] text-center py-4 w-full fixed bottom-0 left-0">
+    <p class="text-black">&copy; 2025 KELOMPOK 4 - SEJARAH INDONESIA</p>
+</footer>
+    <script src="script.js"></script>
+    <script src="timeline.js"></script>
+    <script src="quiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,363 @@
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, blue, cyan);
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.content {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  display: none;
+}
+
+.visible {
+  opacity: 1;
+  display: block;
+}
+
+.fade-in-out {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in-out.opacity-100 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-out.opacity-0 {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slide-presentation {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  padding-bottom: 120px;
+}
+
+.slide-navigation {
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  right: 20px;
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.slide-indicator {
+  bottom: 20px;
+  left: 0px;
+  right: inherit;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.indicator-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator-dot.active {
+  background-color: #3b82f6;
+}
+
+.materi-nav {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.materi-nav:hover {
+  background-color: #f0f0f0;
+}
+
+.materi-nav.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.tab-btn {
+  transition: all 0.3s;
+}
+.tab-btn:hover {
+  background-color: #f0f0f0;
+}
+.tab-content {
+  margin-bottom: 6rem;
+  transition: all 0.3s;
+}
+
+.timeline {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 40%;
+  transform: translateY(-50%);
+  padding: 0 100px;
+  list-style: none;
+  transition: left 0.3s ease;
+  z-index: 2;
+}
+
+.timeline-year {
+  font-weight: bold;
+  color: #3b82f6;
+  margin-bottom: 5px;
+}
+
+.timeline-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.timeline-wrapper {
+  position: relative;
+  height: 600px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2rem 0;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+}
+
+.timeline-event {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #3b82f6;
+  background-color: #f8fafc;
+  border-radius: 0 8px 8px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: black;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.timeline li {
+  position: relative;
+  min-width: 250px;
+  padding: 0 30px;
+  cursor: pointer;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  border: 3px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.timeline li:hover .timeline-dot {
+  transform: translate(-50%, -50%) scale(1.2);
+  background-color: cyan;
+}
+
+.timeline li::before {
+  content: attr(data-date);
+  position: absolute;
+  top: calc(50% - 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.timeline-content {
+  position: absolute;
+  top: calc(50% + 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(
+    145deg,
+    rgba(72, 187, 120, 0.95) 0%,
+    rgba(16, 128, 67, 0.95) 100%
+  );
+  box-shadow: 0 5px 15px rgba(16, 128, 67, 0.3);
+  border-radius: 8px;
+  padding: 1.2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+  color: white;
+}
+
+.timeline-content h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content small {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.timeline-content p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.timeline-content small,
+.timeline-content p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: gray;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+.timeline li.active .timeline-dot {
+  background-color: cyan;
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+.timeline li.active .timeline-content {
+  opacity: 1;
+  visibility: visible;
+  top: calc(50% + 20px);
+}
+
+.timeline-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.timeline-nav button {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.timeline-nav button:hover {
+  background-color: red;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .timeline-wrapper {
+    height: 500px;
+  }
+
+  .timeline li {
+    min-width: 200px;
+  }
+
+  .timeline-content {
+    width: 220px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    padding: 0 50px;
+  }
+
+  .timeline li {
+    min-width: 180px;
+    padding: 0 15px;
+  }
+
+  .timeline-content {
+    width: 180px;
+    padding: 1rem;
+  }
+}
