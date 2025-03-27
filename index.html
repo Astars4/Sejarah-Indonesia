@@ -17,21 +17,25 @@
     <link rel="stylesheet" href="style.css" />
     <title>Sejarah Indonesia</title>
   </head>
-  <nav class="bg-[#9fafab] shadow-md">
-    <div class="container max-w-6xl px-4 mx-auto">
-      <div class="flex flex-col items-center justify-between py-4 md:flex-row">
-        <h1 class="text-2xl font-semibold text-black md:text-3xl">Sejarah Indonesia</h1>
-        
-        <div class="flex flex-wrap justify-center gap-2 mt-4 md:mt-0">
-          <button onclick="handleMenu('materi')" class="px-4 py-2 text-black transition border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white">Materi</button>
-          <button onclick="handleMenu('materiVideo')" class="px-4 py-2 text-black transition border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white">Materi Video</button>
-          <button onclick="handleMenu('quiz')" class="px-4 py-2 text-black transition border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white">Quiz</button>
-          <button onclick="handleMenu('timeline')" class="px-4 py-2 text-black transition border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white">Timeline</button>
-          <button onclick="handleMenu('developer')" class="px-4 py-2 text-black transition border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white">Developer</button>
+  <nav class="background">
+    <div class="container">
+        <div class="nav">
+            <h1 class="text-2xl font-semibold">Sejarah Indonesia</h1>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <button onclick="handleMenu('materi')">Materi</button>
+                <button onclick="handleMenu('materiVideo')">Materi Video</button>
+                <button onclick="handleMenu('quiz')">Quiz</button>
+                <button onclick="handleMenu('timeline')">Timeline</button>
+                <button onclick="handleMenu('developer')">Developer</button>
+            </div>
         </div>
-      </div>
     </div>
-  </nav>
+</nav>
 
   <div id="bg" class="flex flex-col items-center justify-center w-screen min-h-screen px-4 bg-center bg-cover sm:px-6 lg:px-10" style="background-image: url('img/Perdagangan dan Jalur Rempah 2.jpg')">
     <div id="output" class="w-full p-4 bg-white rounded-lg shadow-md min-h-[100px] relative overflow-hidden mb-20 mt-8">
@@ -514,7 +518,7 @@
                         width="280px"
                       />
                       <p>
-                         Peristiwa penting lainnya adalah berdirinya PNI oleh Soekarno dan Sumpah Pemuda tahun 1928 yang menegaskan semangat persatuan bangsa.
+                        Peristiwa penting lainnya adalah berdirinya PNI oleh Soekarno dan Sumpah Pemuda tahun 1928 yang menegaskan semangat persatuan bangsa.
                       </p>
                     </div>
 
@@ -848,7 +852,7 @@
             <h2 class="text-xl font-bold">Materi Video Sejarah Indonesia</h2>
             <p>Video Pembelajaran Sejarah Indonesia</p>
             <div class="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2">
-              <div class="p-4 border rounded-lg aspect-w-16 aspect-h-9">
+              <div class="p-4 border rounded-lg fade-in-out aspect-w-16 aspect-h-9">
                 <h3 class="mb-2 font-bold">Masa Pra Aksara</h3>
                 <iframe
                   width="100%"
@@ -861,7 +865,7 @@
                   allowfullscreen
                 ></iframe>
               </div>
-              <div class="p-4 border rounded-lg">
+              <div class="p-4 border rounded-lg fade-in-out">
                 <h3 class="mb-2 font-bold">Masa Hindu-Buddha</h3>
                 <iframe
                   width="100%"
@@ -874,7 +878,7 @@
                   allowfullscreen
                 ></iframe>
               </div>
-              <div class="p-4 border rounded-lg">
+              <div class="p-4 border rounded-lg fade-in-out">
                 <h3 class="mb-2 font-bold">Masa Islam</h3>
                 <iframe
                   width="100%"
@@ -887,7 +891,7 @@
                   allowfullscreen
                 ></iframe>
               </div>
-              <div class="p-4 border rounded-lg">
+              <div class="p-4 border rounded-lg fade-in-out">
                 <h3 class="mb-2 font-bold">Kesultanan Di Nusantara</h3>
                 <iframe
                   width="100%"
@@ -900,7 +904,7 @@
                   allowfullscreen
                 ></iframe>
               </div>
-              <div class="p-4 border rounded-lg">
+              <div class="p-4 border rounded-lg fade-in-out">
                 <h3 class="mb-2 font-bold">Perdagangan Dan Jalur Rempah</h3>
                 <iframe
                   width="100%"
@@ -913,7 +917,7 @@
                   allowfullscreen
                 ></iframe>
               </div>
-              <div class="p-4 border rounded-lg">
+              <div class="p-4 border rounded-lg fade-in-out">
                 <h3 class="mb-2 font-bold">Penjajahan Bangsa Barat</h3>
                 <iframe
                   width="100%"
@@ -927,7 +931,7 @@
                 >
                 </iframe>
               </div>
-              <div class="p-4 border rounded-lg">
+              <div class="p-4 border rounded-lg fade-in-out">
                 <h3 class="mb-2 font-bold">Organisasi Pergerakan Nasional</h3>
                 <iframe
                   width="100%"
@@ -940,7 +944,7 @@
                   allowfullscreen
                 ></iframe>
               </div>
-              <div class="p-4 border rounded-lg">
+              <div class="p-4 border rounded-lg fade-in-out">
                 <h3 class="mb-2 font-bold">Penjajahan Jepang</h3>
                 <iframe
                   width="100%"
@@ -953,7 +957,7 @@
                   allowfullscreen
                 ></iframe>
               </div>
-              <div class="p-4 border rounded-lg">
+              <div class="p-4 border rounded-lg fade-in-out">
                 <h3 class="mb-2 font-bold">
                   Proklamasi Kemerdekaan dan Perjuangan Mempertahankan
                   Kemerdekaan
@@ -969,7 +973,7 @@
                   allowfullscreen
                 ></iframe>
               </div>
-              <div class="p-4 border rounded-lg">
+              <div class="p-4 border rounded-lg fade-in-out">
                 <h3 class="mb-2 font-bold">
                   Gerakan 30 September 1965 (G30S/PKI)
                 </h3>
@@ -984,7 +988,7 @@
                   allowfullscreen
                 ></iframe>
               </div>
-              <div class="p-4 border rounded-lg">
+              <div class="p-4 border rounded-lg fade-in-out">
                 <h3 class="mb-2 font-bold">Demokrasi di Indonesia</h3>
                 <iframe
                   width="100%"
@@ -997,7 +1001,7 @@
                   allowfullscreen
                 ></iframe>
               </div>
-              <div class="p-4 border rounded-lg">
+              <div class="p-4 border rounded-lg fade-in-out">
                 <h3 class="mb-2 font-bold">Sejarah Indonesia</h3>
                 <iframe
                   width="100%"
@@ -1218,7 +1222,7 @@
           <p class="font-semibold">Alamat: Jln. Gatot Subroto Gang 14</p>
           <p class="font-semibold">Hobi: Membaca Komik</p>
           <div class="flex mt-2 space-x-2">
-            <a href="https://api.whatsapp.com/send?phone=6283140206778/">
+            <a href="https://api.whatsapp.com/send?phone=6283140206778">
               <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#128c7e]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1259,7 +1263,7 @@
           <p class="font-semibold">Alamat: Jln. DI Panjaitan</p>
           <p class="font-semibold">Hobi: Renang</p>
           <div class="flex mt-2 space-x-2">
-            <a href="https://api.whatsapp.com/send?phone=6282213746815/">
+            <a href="https://api.whatsapp.com/send?phone=6282213746815">
               <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#128c7e]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1298,7 +1302,7 @@
           <p class="font-semibold">Alamat: Perjuangan 9</p>
           <p class="font-semibold">Hobi: Badminton dan Menari</p>
           <div class="flex mt-2 space-x-2">
-            <a href="https://api.whatsapp.com/send?phone=6282252313578/">
+            <a href="https://api.whatsapp.com/send?phone=6282252313578">
               <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#128c7e]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1339,7 +1343,7 @@
           <p class="font-semibold">Alamat: Perum Bumi Sempaja</p>
           <p class="font-semibold">Hobi: Futsal</p>
           <di class="flex mt-2 space-x-2">
-            <a href="https://api.whatsapp.com/send?phone=6281253534737/">
+            <a href="https://api.whatsapp.com/send?phone=6281253534737">
               <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#128c7e]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1369,8 +1373,9 @@
 </div>
 
 <footer class="bg-[#9fafab] text-center py-4 w-full fixed bottom-0 left-0">
-    <p class="text-black">&copy; 2025 KELOMPOK 4 - SEJARAH INDONESIA</p>
+  <p class="text-black">Copyright 2025 &copy; KELOMPOK 4 - SEJARAH INDONESIA</p>
 </footer>
+
     <script src="js/script.js"></script>
     <script src="js/timeline.js"></script>
     <script src="js/quiz.js"></script>

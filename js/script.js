@@ -2,6 +2,15 @@ function handleMenu(menu) {
   alert(`Menu ${menu} diklik!`);
 }
 
+function toggleMenu() {
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("active");
+}
+
+function handleMenu(menu) {
+  console.log(`Menu ${menu} clicked`);
+}
+
 const backgrounds = [
   "img/Zaman Prasejarah.jpg",
   "img/Reformasi.jpg",
