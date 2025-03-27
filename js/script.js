@@ -2,18 +2,9 @@ function handleMenu(menu) {
   alert(`Menu ${menu} diklik!`);
 }
 
-function toggleMenu() {
-  const navLinks = document.getElementById("navLinks");
-  navLinks.classList.toggle("active");
-}
-
-function handleMenu(menu) {
-  console.log(`Menu ${menu} clicked`);
-}
-
 const backgrounds = [
-  "img/Zaman Prasejarah.jpg",
-  "img/Reformasi.jpg",
+  "img/Zaman Prasejarah 2.jpg",
+  "img/Perdagangan dan Jalur Rempah.jpg",
   "img/G 30 S PKI.jpg",
   "img/Kerajaan Kesultanan 3.jpg",
 ];
