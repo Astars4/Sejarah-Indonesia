@@ -2,12 +2,7 @@ function handleMenu(menu) {
   alert(`Menu ${menu} diklik!`);
 }
 
-const backgrounds = [
-  "img/Zaman Prasejarah 2.jpg",
-  "img/Perdagangan dan Jalur Rempah.jpg",
-  "img/G 30 S PKI.jpg",
-  "img/Kerajaan Kesultanan 3.jpg",
-];
+const backgrounds = ["img/Zaman Prasejarah 2.jpg", "img/Parlementer.jpg"];
 
 let currentIndex = 0;
 const bgElement = document.getElementById("bg");
